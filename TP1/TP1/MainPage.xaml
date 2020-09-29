@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="TP1.MainPage">
+    <StackLayout Spacing="0">
+        <StackLayout Orientation="Horizontal" 
+                     BackgroundColor="#58B0F0"
+                     Padding="10,25" 
+                     VerticalOptions="Start">
+            <Label Text="Nouveau" HorizontalOptions="StartAndExpand" 
+               VerticalOptions="CenterAndExpand"/>
+            <Label Text="Accueil" HorizontalOptions="CenterAndExpand" 
+               VerticalOptions="CenterAndExpand"/>
+            <Label Text="Rechercher" HorizontalOptions="EndAndExpand"
+               VerticalOptions="CenterAndExpand"/>
+        </StackLayout>
+
+        <ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="Tomato">
+            <StackLayout Orientation="Vertical" Padding="20">
+                <StackLayout Orientation="Horizontal">
+                    <StackLayout BackgroundColor="Black" WidthRequest="75"/>
+
+                    <StackLayout Orientation="Vertical">
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Auteur" HorizontalOptions="StartAndExpand"
+                                   VerticalOptions="EndAndExpand"/>
+                            <Label Text="Identifiant" HorizontalOptions="StartAndExpand"
+                                   VerticalOptions="EndAndExpand"/>
+                            <Label Text="Date du post" HorizontalOptions="EndAndExpand"
+                                   VerticalOptions="EndAndExpand"/>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal" >
+                            <Label Text="Créer une carte comportant trois zones qui se suivent verticalement : une première
+                                        zone avec le contenu du tweet, une deuxième avec trois textes (Répondre, Retweet et
+                                        Favoris) et une dernière qui représente une fine barre grise de séparation."/>
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Padding="10">
+                    <Label Text="Répondre" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                    <Label Text="Retweet" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                    <Label Text="Favoris" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                </StackLayout>
+                <StackLayout BackgroundColor="#9e9e9e" HeightRequest="1" Margin="20"/>
+
+
+
+            </StackLayout>
+
+        </ScrollView>
+        <StackLayout HeightRequest="75" 
+                     Orientation="Horizontal"
+                     BackgroundColor="#58B0F0"
+                     VerticalOptions="End">
+            <Label Text="Fil" HorizontalOptions="CenterAndExpand" 
+               VerticalOptions="CenterAndExpand"/>
+            <Label Text="Notifications" HorizontalOptions="CenterAndExpand" 
+               VerticalOptions="CenterAndExpand"/>
+            <Label Text="Message" HorizontalOptions="CenterAndExpand"
+               VerticalOptions="CenterAndExpand"/>
+            <Label Text="Moi" HorizontalOptions="CenterAndExpand"
+               VerticalOptions="CenterAndExpand"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
