@@ -3,6 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             
+             xmlns:local="clr-namespace:TP1;assembly=TP1"
+             
              mc:Ignorable="d"
              x:Class="TP1.MainPage">
     <StackLayout Spacing="0">
@@ -10,18 +13,29 @@
                      BackgroundColor="#58B0F0"
                      Padding="10,25" 
                      VerticalOptions="Start">
-            <Label Text="Nouveau" HorizontalOptions="StartAndExpand" 
+            <ImageButton Source="{local:ImageResource TP1.images.pencil.png}" WidthRequest="25" HorizontalOptions="StartAndExpand" 
                VerticalOptions="CenterAndExpand"/>
-            <Label Text="Accueil" HorizontalOptions="CenterAndExpand" 
+            <Label Text="Accueil" TextColor="White" FontAttributes="Bold" FontSize="20" HorizontalOptions="CenterAndExpand" 
                VerticalOptions="CenterAndExpand"/>
-            <Label Text="Rechercher" HorizontalOptions="EndAndExpand"
+            <ImageButton Source="{local:ImageResource TP1.images.search.png}" WidthRequest="25" HorizontalOptions="EndAndExpand"
                VerticalOptions="CenterAndExpand"/>
         </StackLayout>
-
+        <!--Connexion-->
+        <StackLayout Orientation="Vertical" BackgroundColor="GreenYellow">
+            <Label Text="Connexion à Twitter" TextColor="Gray" HorizontalOptions="Center"/>
+            <Entry Placeholder="Identifiant Twitter" BackgroundColor="DarkOliveGreen"/>
+            <Entry Placeholder="Mot de passe" IsPassword="True" BackgroundColor="DarkOliveGreen"/>
+            <StackLayout Orientation="Horizontal">
+            <Switch/>
+                <Label Text="Mémoriser les informations" TextColor="Gray"/>
+            </StackLayout>
+            <Button Text="Se Connecter" HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+        <!--Tweet-->
         <ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="Tomato">
             <StackLayout Orientation="Vertical" Padding="20">
                 <StackLayout Orientation="Horizontal">
-                    <StackLayout BackgroundColor="Black" WidthRequest="75"/>
+                    <Image Source="https://picsum.photos/50/50/?random" WidthRequest="75"/>
 
                     <StackLayout Orientation="Vertical">
                         <StackLayout Orientation="Horizontal">
@@ -34,7 +48,7 @@
                         </StackLayout>
 
                         <StackLayout Orientation="Horizontal" >
-                            <Label Text="Créer une carte comportant trois zones qui se suivent verticalement : une première
+                            <Label FontFamily="Lobster-Regular" Text="Créer une carte comportant trois zones qui se suivent verticalement : une première
                                         zone avec le contenu du tweet, une deuxième avec trois textes (Répondre, Retweet et
                                         Favoris) et une dernière qui représente une fine barre grise de séparation."/>
                         </StackLayout>
@@ -42,9 +56,9 @@
                 </StackLayout>
 
                 <StackLayout Orientation="Horizontal" Padding="10">
-                    <Label Text="Répondre" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
-                    <Label Text="Retweet" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
-                    <Label Text="Favoris" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                    <ImageButton Source="{local:ImageResource TP1.images.reply.png}" WidthRequest="25" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                    <ImageButton Source="{local:ImageResource TP1.images.retweet.png}" WidthRequest="25" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                    <ImageButton Source="{local:ImageResource TP1.images.favorite.png}" WidthRequest="25" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
                 </StackLayout>
                 <StackLayout BackgroundColor="#9e9e9e" HeightRequest="1" Margin="20"/>
 
