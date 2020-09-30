@@ -9,6 +9,7 @@
              mc:Ignorable="d"
              x:Class="TP1.MainPage">
     <StackLayout Spacing="0">
+        <!--Barre de navigation-->
         <StackLayout Orientation="Horizontal" 
                      BackgroundColor="#58B0F0"
                      Padding="10,25" 
@@ -21,18 +22,22 @@
                VerticalOptions="CenterAndExpand"/>
         </StackLayout>
         <!--Connexion-->
-        <StackLayout Orientation="Vertical" BackgroundColor="GreenYellow">
+        <StackLayout Orientation="Vertical" BackgroundColor="GreenYellow" x:Name="login" IsVisible="true">
             <Label Text="Connexion à Twitter" TextColor="Gray" HorizontalOptions="Center"/>
-            <Entry Placeholder="Identifiant Twitter" BackgroundColor="DarkOliveGreen"/>
-            <Entry Placeholder="Mot de passe" IsPassword="True" BackgroundColor="DarkOliveGreen"/>
+            <Entry Placeholder="Identifiant Twitter" BackgroundColor="DarkOliveGreen" x:Name="id"/>
+            <Entry Placeholder="Mot de passe" IsPassword="True" BackgroundColor="DarkOliveGreen" x:Name="password"/>
             <StackLayout Orientation="Horizontal">
-            <Switch/>
+            <Switch x:Name="memo"/>
                 <Label Text="Mémoriser les informations" TextColor="Gray"/>
             </StackLayout>
-            <Button Text="Se Connecter" HorizontalOptions="FillAndExpand"/>
+            <Button Text="Se Connecter" HorizontalOptions="FillAndExpand" x:Name="connection"/>
+            
+            <!-- Message d'erreur -->
+            <Label Text="test" TextColor="White" BackgroundColor="Red" x:Name="error" IsVisible="false"/>
+
         </StackLayout>
         <!--Tweet-->
-        <ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="Tomato">
+        <ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="Tomato" x:Name="scroll" IsVisible="false">
             <StackLayout Orientation="Vertical" Padding="20">
                 <StackLayout Orientation="Horizontal">
                     <Image Source="https://picsum.photos/50/50/?random" WidthRequest="75"/>
@@ -62,15 +67,15 @@
                 </StackLayout>
                 <StackLayout BackgroundColor="#9e9e9e" HeightRequest="1" Margin="20"/>
 
-
-
             </StackLayout>
 
         </ScrollView>
+        
+        <!--Barre du bas-->
         <StackLayout HeightRequest="75" 
                      Orientation="Horizontal"
                      BackgroundColor="#58B0F0"
-                     VerticalOptions="End">
+                     VerticalOptions="EndAndExpand">
             <Label Text="Fil" HorizontalOptions="CenterAndExpand" 
                VerticalOptions="CenterAndExpand"/>
             <Label Text="Notifications" HorizontalOptions="CenterAndExpand" 
