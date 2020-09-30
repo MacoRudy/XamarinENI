@@ -22,7 +22,7 @@
                VerticalOptions="CenterAndExpand"/>
         </StackLayout>
         <!--Connexion-->
-        <StackLayout Orientation="Vertical" BackgroundColor="GreenYellow" x:Name="login" IsVisible="true">
+        <StackLayout HorizontalOptions="FillAndExpand" Orientation="Vertical" BackgroundColor="GreenYellow" x:Name="login" IsVisible="true" VerticalOptions="Start">
             <Label Text="Connexion à Twitter" TextColor="Gray" HorizontalOptions="Center"/>
             <Entry Placeholder="Identifiant Twitter" BackgroundColor="DarkOliveGreen" x:Name="id"/>
             <Entry Placeholder="Mot de passe" IsPassword="True" BackgroundColor="DarkOliveGreen" x:Name="password"/>
@@ -33,7 +33,7 @@
             <Button Text="Se Connecter" HorizontalOptions="FillAndExpand" x:Name="connection"/>
             
             <!-- Message d'erreur -->
-            <Label Text="test" TextColor="White" BackgroundColor="Red" x:Name="error" IsVisible="false"/>
+            <Label Text="erreur" TextColor="White" BackgroundColor="Red" x:Name="error" IsVisible="false"/>
 
         </StackLayout>
         <!--Tweet-->
@@ -58,8 +58,113 @@
                                         Favoris) et une dernière qui représente une fine barre grise de séparation."/>
                         </StackLayout>
                     </StackLayout>
+                
                 </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="https://picsum.photos/50/50/?random" WidthRequest="75"/>
 
+                    <StackLayout Orientation="Vertical">
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Auteur" HorizontalOptions="StartAndExpand"
+                                   VerticalOptions="EndAndExpand"/>
+                            <Label Text="Identifiant" HorizontalOptions="StartAndExpand"
+                                   VerticalOptions="EndAndExpand"/>
+                            <Label Text="Date du post" HorizontalOptions="EndAndExpand"
+                                   VerticalOptions="EndAndExpand"/>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal" >
+                            <Label FontFamily="Lobster-Regular" Text="Créer une carte comportant trois zones qui se suivent verticalement : une première
+                                        zone avec le contenu du tweet, une deuxième avec trois textes (Répondre, Retweet et
+                                        Favoris) et une dernière qui représente une fine barre grise de séparation."/>
+                        </StackLayout>
+                    </StackLayout>
+
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="https://picsum.photos/50/50/?random" WidthRequest="75"/>
+
+                    <StackLayout Orientation="Vertical">
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Auteur" HorizontalOptions="StartAndExpand"
+                                   VerticalOptions="EndAndExpand"/>
+                            <Label Text="Identifiant" HorizontalOptions="StartAndExpand"
+                                   VerticalOptions="EndAndExpand"/>
+                            <Label Text="Date du post" HorizontalOptions="EndAndExpand"
+                                   VerticalOptions="EndAndExpand"/>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal" >
+                            <Label FontFamily="Lobster-Regular" Text="Créer une carte comportant trois zones qui se suivent verticalement : une première
+                                        zone avec le contenu du tweet, une deuxième avec trois textes (Répondre, Retweet et
+                                        Favoris) et une dernière qui représente une fine barre grise de séparation."/>
+                        </StackLayout>
+                    </StackLayout>
+
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="https://picsum.photos/50/50/?random" WidthRequest="75"/>
+
+                    <StackLayout Orientation="Vertical">
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Auteur" HorizontalOptions="StartAndExpand"
+                                   VerticalOptions="EndAndExpand"/>
+                            <Label Text="Identifiant" HorizontalOptions="StartAndExpand"
+                                   VerticalOptions="EndAndExpand"/>
+                            <Label Text="Date du post" HorizontalOptions="EndAndExpand"
+                                   VerticalOptions="EndAndExpand"/>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal" >
+                            <Label FontFamily="Lobster-Regular" Text="Créer une carte comportant trois zones qui se suivent verticalement : une première
+                                        zone avec le contenu du tweet, une deuxième avec trois textes (Répondre, Retweet et
+                                        Favoris) et une dernière qui représente une fine barre grise de séparation."/>
+                        </StackLayout>
+                    </StackLayout>
+
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="https://picsum.photos/50/50/?random" WidthRequest="75"/>
+
+                    <StackLayout Orientation="Vertical">
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Auteur" HorizontalOptions="StartAndExpand"
+                                   VerticalOptions="EndAndExpand"/>
+                            <Label Text="Identifiant" HorizontalOptions="StartAndExpand"
+                                   VerticalOptions="EndAndExpand"/>
+                            <Label Text="Date du post" HorizontalOptions="EndAndExpand"
+                                   VerticalOptions="EndAndExpand"/>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal" >
+                            <Label FontFamily="Lobster-Regular" Text="Créer une carte comportant trois zones qui se suivent verticalement : une première
+                                        zone avec le contenu du tweet, une deuxième avec trois textes (Répondre, Retweet et
+                                        Favoris) et une dernière qui représente une fine barre grise de séparation."/>
+                        </StackLayout>
+                    </StackLayout>
+
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="https://picsum.photos/50/50/?random" WidthRequest="75"/>
+
+                    <StackLayout Orientation="Vertical">
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Auteur" HorizontalOptions="StartAndExpand"
+                                   VerticalOptions="EndAndExpand"/>
+                            <Label Text="Identifiant" HorizontalOptions="StartAndExpand"
+                                   VerticalOptions="EndAndExpand"/>
+                            <Label Text="Date du post" HorizontalOptions="EndAndExpand"
+                                   VerticalOptions="EndAndExpand"/>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal" >
+                            <Label FontFamily="Lobster-Regular" Text="Créer une carte comportant trois zones qui se suivent verticalement : une première
+                                        zone avec le contenu du tweet, une deuxième avec trois textes (Répondre, Retweet et
+                                        Favoris) et une dernière qui représente une fine barre grise de séparation."/>
+                        </StackLayout>
+                    </StackLayout>
+
+                </StackLayout>
                 <StackLayout Orientation="Horizontal" Padding="10">
                     <ImageButton Source="{local:ImageResource TP1.images.reply.png}" WidthRequest="25" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
                     <ImageButton Source="{local:ImageResource TP1.images.retweet.png}" WidthRequest="25" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>

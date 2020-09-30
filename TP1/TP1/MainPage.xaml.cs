@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,7 +24,7 @@ namespace TP1
             string password = this.password.Text.ToString();
             string id = this.id.Text.ToString();
             string memo = this.memo.IsToggled.ToString();
-            System.Console.WriteLine(id + " " + password + " " + memo);
+            Debug.WriteLine(id + " " + password + " " + memo);
             bool okId = false;
             bool okPwd = false;
             if (id.Trim().Length < 3 )
