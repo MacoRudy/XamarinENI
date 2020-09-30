@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:local="clr-namespace:TP1;assembly=TP1"
+             x:Class="TP1.Views.TweetView">
+    <ContentView.Content>
+        <StackLayout Orientation="Vertical" Padding="20">
+            <StackLayout Orientation="Horizontal">
+                <Image Source="https://picsum.photos/50/50/?random" WidthRequest="75"/>
+
+                <StackLayout Orientation="Vertical">
+                    <StackLayout Orientation="Horizontal">
+                        <Label x:Name="pseudo" Text="Auteur" HorizontalOptions="StartAndExpand"
+                                   VerticalOptions="EndAndExpand"/>
+                        <Label x:Name="mail" Text="Identifiant" HorizontalOptions="StartAndExpand"
+                                   VerticalOptions="EndAndExpand"/>
+                        <Label x:Name="dateCreation" Text="Date du post" HorizontalOptions="EndAndExpand"
+                                   VerticalOptions="EndAndExpand"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" >
+                        <Label x:Name="texte" FontFamily="Lobster-Regular" Text="Créer une carte comportant trois zones qui se suivent verticalement : une première
+                                        zone avec le contenu du tweet, une deuxième avec trois textes (Répondre, Retweet et
+                                        Favoris) et une dernière qui représente une fine barre grise de séparation."/>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Padding="10">
+                <ImageButton Source="{local:ImageResource TP1.images.reply.png}" WidthRequest="25" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                <ImageButton Source="{local:ImageResource TP1.images.retweet.png}" WidthRequest="25" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                <ImageButton Source="{local:ImageResource TP1.images.favorite.png}" WidthRequest="25" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+            </StackLayout>
+            <StackLayout BackgroundColor="#9e9e9e" HeightRequest="1" Margin="20"/>
+
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

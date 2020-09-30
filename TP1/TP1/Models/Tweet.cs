@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TP1.Models
 {
-    class Tweet
+    public class Tweet
     {
         public string Mail { get; set; }
         public DateTime DateCreation { get; set; }
