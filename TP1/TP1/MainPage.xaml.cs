@@ -5,6 +5,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TP1.Services;
 using Xamarin.Forms;
 
 namespace TP1
@@ -21,8 +22,9 @@ namespace TP1
 
         private void Connection_Clicked(object sender, EventArgs e)
         {
-            bool memo = this.memo.IsToggled;
+            TwitterService twitterService = new TwitterService();
             
+            bool memo = this.memo.IsToggled;
             bool okId = false;
             bool okPwd = false;
             if (this.id.Text == null || this.id.Text.ToString().Trim().Length < 3 )
@@ -44,12 +46,18 @@ namespace TP1
                 okPwd = true;
             }
 
-            if (okId && okPwd)
+            if (twitterService.authenticate(this.id.Text.ToString(), this.password.Text.ToString()))
             {
                 Debug.WriteLine(this.id.Text.ToString() + " " + this.password.Text.ToString() + " " + memo);
                 this.scroll.IsVisible = true;
                 this.login.IsVisible = false;
                 this.error.IsVisible = false;
+            } else
+            {
+                this.error.Text = "Mauvais combo user/password";
+                this.error.IsVisible = true;
+                this.id.Text = "";
+                this.password.Text = "";
             }
         }
     }
