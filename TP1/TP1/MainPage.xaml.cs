@@ -21,13 +21,11 @@ namespace TP1
 
         private void Connection_Clicked(object sender, EventArgs e)
         {
-            string password = this.password.Text.ToString();
-            string id = this.id.Text.ToString();
-            string memo = this.memo.IsToggled.ToString();
-            Debug.WriteLine(id + " " + password + " " + memo);
+            bool memo = this.memo.IsToggled;
+            
             bool okId = false;
             bool okPwd = false;
-            if (id.Trim().Length < 3 )
+            if (this.id.Text == null || this.id.Text.ToString().Trim().Length < 3 )
             {
                 this.error.Text = "L'identifiant doit avoir au moins 3 caractères";
                 this.error.IsVisible = true;
@@ -37,7 +35,7 @@ namespace TP1
                 okId = true;
             }
 
-            if (password.Trim().Length < 6)
+            if (this.password.Text == null || this.password.Text.ToString().Trim().Length < 6)
             {
                 this.error.Text = "Le mot de passe doit avoir au moins 6 caractères";
                 this.error.IsVisible = true;
@@ -48,6 +46,7 @@ namespace TP1
 
             if (okId && okPwd)
             {
+                Debug.WriteLine(this.id.Text.ToString() + " " + this.password.Text.ToString() + " " + memo);
                 this.scroll.IsVisible = true;
                 this.login.IsVisible = false;
                 this.error.IsVisible = false;
