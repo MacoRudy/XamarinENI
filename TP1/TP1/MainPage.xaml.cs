@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using TP1.Models;
 using TP1.Services;
 using TP1.Views;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace TP1
@@ -23,6 +24,7 @@ namespace TP1
             InitializeComponent();
             this.connection.Clicked += Connection_Clicked;
             this.LoadTweets(this.StacklayoutTweets);
+
         }
 
         private void LoadTweets(StackLayout stacklayoutTweets)
@@ -60,7 +62,13 @@ namespace TP1
             {
                 okPwd = true;
             }
+            var current = Connectivity.NetworkAccess;
 
+            if (current == NetworkAccess.Internet)
+            {
+                this.error.Text = "Veuillez vous connecter a internet";
+                this.error.IsVisible = true;
+            }
             if (twitterService.authenticate(this.id.Text.ToString(), this.password.Text.ToString()))
             {
                 Debug.WriteLine(this.id.Text.ToString() + " " + this.password.Text.ToString() + " " + memo);

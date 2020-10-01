@@ -39,7 +39,7 @@
         <!--Tweet-->
         <ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="Tomato" x:Name="scroll" IsVisible="false">
             <StackLayout x:Name="StacklayoutTweets" Spacing="0">
-                <Views:TweetView/>
+                
             </StackLayout>
         </ScrollView>
 
