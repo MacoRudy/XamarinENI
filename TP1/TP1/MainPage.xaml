@@ -10,19 +10,11 @@
              x:Class="TP1.MainPage">
     <StackLayout Spacing="0">
         <!--Barre de navigation-->
-        <StackLayout Orientation="Horizontal" 
-                     BackgroundColor="#58B0F0"
-                     Padding="10,25" 
-                     VerticalOptions="Start">
-            <ImageButton Source="{local:ImageResource TP1.images.pencil.png}" WidthRequest="25" HorizontalOptions="StartAndExpand" 
-               VerticalOptions="CenterAndExpand"/>
-            <Label Text="Accueil" TextColor="White" FontAttributes="Bold" FontSize="20" HorizontalOptions="CenterAndExpand" 
-               VerticalOptions="CenterAndExpand"/>
-            <ImageButton Source="{local:ImageResource TP1.images.search.png}" WidthRequest="25" HorizontalOptions="EndAndExpand"
-               VerticalOptions="CenterAndExpand"/>
-        </StackLayout>
+        
+            <Views:HeaderView/>
+        
         <!--Connexion-->
-        <StackLayout HorizontalOptions="FillAndExpand" Orientation="Vertical" BackgroundColor="GreenYellow" x:Name="login" IsVisible="true" VerticalOptions="Start">
+        <StackLayout HorizontalOptions="FillAndExpand" Orientation="Vertical" BackgroundColor="GreenYellow" x:Name="login" IsVisible="true" VerticalOptions="FillAndExpand">
             <Label Text="Connexion à Twitter" TextColor="Gray" HorizontalOptions="Center"/>
             <Entry Placeholder="Identifiant Twitter" BackgroundColor="DarkOliveGreen" x:Name="id"/>
             <Entry Placeholder="Mot de passe" IsPassword="True" BackgroundColor="DarkOliveGreen" x:Name="password"/>
@@ -36,26 +28,16 @@
             <Label Text="erreur" TextColor="White" BackgroundColor="Red" x:Name="error" IsVisible="false"/>
 
         </StackLayout>
-        <!--Tweet-->
-        <ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="Tomato" x:Name="scroll" IsVisible="false">
-            <StackLayout x:Name="StacklayoutTweets" Spacing="0">
-                
-            </StackLayout>
-        </ScrollView>
 
-        <!--Barre du bas-->
-        <StackLayout HeightRequest="75" 
-                     Orientation="Horizontal"
-                     BackgroundColor="#58B0F0"
-                     VerticalOptions="EndAndExpand">
-            <Label Text="Fil" HorizontalOptions="CenterAndExpand" 
-               VerticalOptions="CenterAndExpand"/>
-            <Label Text="Notifications" HorizontalOptions="CenterAndExpand" 
-               VerticalOptions="CenterAndExpand"/>
-            <Label Text="Message" HorizontalOptions="CenterAndExpand"
-               VerticalOptions="CenterAndExpand"/>
-            <Label Text="Moi" HorizontalOptions="CenterAndExpand"
-               VerticalOptions="CenterAndExpand"/>
-        </StackLayout>
+        <!--Tweet-->
+        <!--<ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="Tomato" x:Name="scroll" IsVisible="false">
+            <StackLayout x:Name="StacklayoutTweets" Spacing="0">
+            </StackLayout>
+        </ScrollView>-->
+
+       
+            <!--Barre du bas-->
+            <Views:FooterView VerticalOptions="End"/>
+        
     </StackLayout>
 </ContentPage>

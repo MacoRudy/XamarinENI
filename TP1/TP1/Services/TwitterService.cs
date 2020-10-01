@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Text;
 using TP1.Models;
 
@@ -18,9 +19,9 @@ namespace TP1.Services
             return result;
         }
 
-        public List<Tweet> GetTweets(string truc)
+        public ObservableCollection<Tweet> GetTweets(string truc)
         {
-            List<Tweet> listeTweet = new List<Tweet>();
+            ObservableCollection<Tweet> listeTweet = new ObservableCollection<Tweet>();
 
             listeTweet.Add(new Tweet
             {

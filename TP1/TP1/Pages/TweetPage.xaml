@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:Views="clr-namespace:TP1.Views"
+             xmlns:local="clr-namespace:TP1;assembly=TP1"
+             x:Class="TP1.Pages.TweetPage">
+    <ContentPage.Content>
+        <StackLayout Spacing="0">
+            <!--Barre de navigation-->
+           
+                <Views:HeaderView/>
+            <!--Tweets-->
+            <ListView x:Name="TweetList">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Vertical" Padding="20">
+                                <StackLayout Orientation="Horizontal">
+                                    <Image Source="https://picsum.photos/50/50/?random" WidthRequest="75"/>
+
+                                    <StackLayout Orientation="Vertical">
+                                        <StackLayout Orientation="Horizontal">
+                                            <Label x:Name="pseudo" Text="{Binding Pseudo}" HorizontalOptions="StartAndExpand"
+                                   VerticalOptions="EndAndExpand"/>
+                                            <Label x:Name="mail" Text="{Binding Mail}" HorizontalOptions="StartAndExpand"
+                                   VerticalOptions="EndAndExpand"/>
+                                            <Label x:Name="dateCreation" Text="{Binding DateCreation}" HorizontalOptions="EndAndExpand"
+                                   VerticalOptions="EndAndExpand"/>
+                                        </StackLayout>
+
+                                        <StackLayout Orientation="Horizontal" >
+                                            <Label x:Name="texte" FontFamily="Lobster-Regular" Text="{Binding Texte}"/>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal" Padding="10">
+                                    <ImageButton Source="{local:ImageResource TP1.images.reply.png}" WidthRequest="25" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                                    <ImageButton Source="{local:ImageResource TP1.images.retweet.png}" WidthRequest="25" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                                    <ImageButton Source="{local:ImageResource TP1.images.favorite.png}" WidthRequest="25" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                                </StackLayout>
+                                <StackLayout BackgroundColor="#9e9e9e" HeightRequest="1" Margin="20"/>
+
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            
+                <!--Barre du bas-->
+            <Views:FooterView VerticalOptions="End"/>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

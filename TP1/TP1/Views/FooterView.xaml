@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="TP1.Views.FooterView">
+    <ContentView.Content>
+        <StackLayout x:Name="FooterLayout" 
+                     HeightRequest="75" 
+                     Orientation="Horizontal"
+                     BackgroundColor="#58B0F0"
+                     VerticalOptions="EndAndExpand">
+
+            <Label Text="Fil" HorizontalOptions="CenterAndExpand" 
+               VerticalOptions="CenterAndExpand"/>
+            <Label Text="Notifications" HorizontalOptions="CenterAndExpand" 
+               VerticalOptions="CenterAndExpand"/>
+            <Label Text="Message" HorizontalOptions="CenterAndExpand"
+               VerticalOptions="CenterAndExpand"/>
+            <Label Text="Moi" HorizontalOptions="CenterAndExpand"
+               VerticalOptions="CenterAndExpand"/>
+
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

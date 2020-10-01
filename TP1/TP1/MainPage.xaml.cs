@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TP1.Models;
+using TP1.Pages;
 using TP1.Services;
 using TP1.Views;
 using Xamarin.Essentials;
@@ -23,17 +24,17 @@ namespace TP1
             this.twitterService = new TwitterService();
             InitializeComponent();
             this.connection.Clicked += Connection_Clicked;
-            this.LoadTweets(this.StacklayoutTweets);
+            //this.LoadTweets(this.StacklayoutTweets);
 
         }
 
-        private void LoadTweets(StackLayout stacklayoutTweets)
-        {
-            foreach (var item in twitterService.GetTweets("truite"))
-            {
-                stacklayoutTweets.Children.Add(new TweetView().LoadData(item));
-            }
-        }
+        //private void LoadTweets(StackLayout stacklayoutTweets)
+        //{
+        //    foreach (var item in twitterService.GetTweets("truite"))
+        //    {
+        //        stacklayoutTweets.Children.Add(new TweetView().LoadData(item));
+        //    }
+        //}
 
         private void Connection_Clicked(object sender, EventArgs e)
         {
@@ -71,11 +72,8 @@ namespace TP1
             }
             if (twitterService.authenticate(this.id.Text.ToString(), this.password.Text.ToString()))
             {
-                Debug.WriteLine(this.id.Text.ToString() + " " + this.password.Text.ToString() + " " + memo);
-                this.scroll.IsVisible = true;
-                this.login.IsVisible = false;
-                this.error.IsVisible = false;
-                
+                Navigation.PushAsync(new TweetPage());
+
             }
             else
             {
